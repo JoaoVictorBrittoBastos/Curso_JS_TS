@@ -13,5 +13,4 @@ function exercicio3(kg:number, h:number){
     console.log( `exercício 3: ${ kg / (h*h) }`);
 }
 exercicio3(71, 1.61);
-
 // 80 kg ÷ (1,80 m × 1,80 m)
