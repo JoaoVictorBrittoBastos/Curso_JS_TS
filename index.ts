@@ -1,16 +1,64 @@
 
-function exercicio1(numero1:number, numero2:number){
-    console.log(`exercicio 1: ${numero1 + numero2}`)
-}
-exercicio1(2, 4)
 
-function exercicio2(n1:number, n2:number, n3:number, n4:number, n5:number){
-    console.log( `exercício 2: ${(n1+n2+n3+n4+n5) / 5}`);
-}
-exercicio2(1, 7, 3, 2, 5);
+const produtos  = [
+  {
+    id: 1,
+    modelo: "blusa do naruto",
+    marca: "lacosta",
+    categoria: "blusa",
+  },
+  {
+    id: 2,
+    modelo: "bermuda do naruto",
+    marca: "lacosta",
+    categoria: "bermuda",
+  },
+  {
+    id: 3,
+    modelo: "bandana do naruto",
+    marca: "lacosta",
+    categoria: "acessorios",
+  },
+];
 
-function exercicio3(kg:number, h:number){
-    console.log( `exercício 3: ${ kg / (h*h) }`);
+// Exercício 1:
+console.log(produtos);
+function filtro_umArray(categoria: string){
+    return produtos.filter((produto) => {
+       return produto.categoria === categoria;
+    });
+    
 }
-exercicio3(71, 1.61);
-// 80 kg ÷ (1,80 m × 1,80 m)
+console.log(filtro_umArray("acessorios"));
+
+// Exercício 2:
+
+function awewa(w: number, quant: number){
+  let arrayMat = []; 
+  let cont = 0;
+  let matriz = [];
+  for(let i=0;i<w;i++){
+    cont = i 
+  }
+  for(let j=0;j<quant;j++){
+    console.log(arrayMat = [{i, j}]);
+  }
+  // matriz = i * j;
+}
+
+
+(awewa(3, 27));
+
+// // const blusas = [
+//     { id: 1, marca: 'lacosta', modelo: 'blusa do naruto', preco: 3.50 },
+//     { id: 2, marca: 'lacosta', modelo: 'blusa do naruto', preco: 7.00 },
+//     { id: 3, marca: 'lacosta', modelo: 'blusa do naruto', preco: 12.50 },
+//     { id: 4, marca: 'lacosta', modelo: 'blusa do naruto', preco: 1.99 },
+// ]
+// blusas.reduce((acc, blusa)=>{
+//     if (blusa.id > 1) {
+//         acc[0].quantidade += 1;
+//     }
+//     return acc
+//     }
+//     , [{ id:1, marca: 'lacosta', modelo: 'blusa do naruto', preco: 12.50, quantidade: 1 }]);
