@@ -26,31 +26,38 @@ function filtro_umArray(categoria) {
         return produto.categoria === categoria;
     });
 }
+console.log('Exercício 1: ');
 console.log(filtro_umArray("acessorios"));
 // Exercício 2:
-function awewa(w, quant) {
-    let arrayMat = [];
-    let cont = 0;
+function exibeMat(tam) {
+    let arr = [];
     let matriz = [];
-    for (let i = 0; i < w; i++) {
-        cont = i;
+    for (let i = 0; i < tam; i++) {
+        arr[i] = i + 1;
     }
-    for (let j = 0; j < quant; j++) {
-        console.log(arrayMat = [{ i, j }]);
+    let cont = 0;
+    for (let i = 0; i < tam; i++) {
+        if (i % 3 === 0) {
+            matriz[cont] = arr.slice(i, i + 3);
+            cont++;
+        }
     }
-    // matriz = i * j;
+    return matriz;
 }
-(awewa(3, 27));
-// // const blusas = [
-//     { id: 1, marca: 'lacosta', modelo: 'blusa do naruto', preco: 3.50 },
-//     { id: 2, marca: 'lacosta', modelo: 'blusa do naruto', preco: 7.00 },
-//     { id: 3, marca: 'lacosta', modelo: 'blusa do naruto', preco: 12.50 },
-//     { id: 4, marca: 'lacosta', modelo: 'blusa do naruto', preco: 1.99 },
-// ]
-// blusas.reduce((acc, blusa)=>{
-//     if (blusa.id > 1) {
-//         acc[0].quantidade += 1;
-//     }
-//     return acc
-//     }
-//     , [{ id:1, marca: 'lacosta', modelo: 'blusa do naruto', preco: 12.50, quantidade: 1 }]);
+console.log('Exercício 2: ');
+console.log(exibeMat(27));
+function geraMatrizSomada(tam) {
+    const matriz = exibeMat(tam);
+    return matriz.map((array) => {
+        const soma = [0];
+        soma[0] = array.reduce((acumulador, atual) => {
+            // console.log(acumulador, atual);
+            return acumulador + atual;
+        });
+        // matriz.reduce(function(previousValue, currentValue){ 
+        //   return previousValue[tam] + currentValue[3];
+        // });
+        return soma;
+    });
+}
+console.log("Matriz somada gerada:", geraMatrizSomada(27));
