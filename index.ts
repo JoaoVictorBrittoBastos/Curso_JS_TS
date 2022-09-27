@@ -70,5 +70,5 @@ function geraMatrizSomada( tam: number){
   return soma;
   })
 }
-
+console.log("Exercício 3: ");
 console.log("Matriz somada gerada:", geraMatrizSomada(27));
